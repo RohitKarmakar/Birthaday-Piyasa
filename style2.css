@@ -1,0 +1,140 @@
+.container {
+    border-radius: 5px;
+    box-shadow: 10px 10px 100px rgb(255, 94, 0), -10px -10px 100px rgb(0, 255, 204);
+    padding: 5px;
+    background-color: rgb(54, 0, 26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+#box1 {
+    margin-bottom: 5px;
+    font-size: 23px;
+    color: rgb(253, 253, 253);
+    font-family: "Permanent Marker", cursive;
+    animation: box1 3s backwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes box1 {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+#box2 {
+    font-size: 30px;
+    font-family: "Satisfy", cursive;
+    color: red;
+    animation: box2 5s backwards;
+    animation-delay: 1.5s; /* Slight delay to synchronize with box1 */
+}
+
+@keyframes box2 {
+    from { opacity: 0; transform: translateX(-100%) rotate(-120deg); }
+    to { opacity: 1; transform: translateX(0) rotate(0); }
+}
+
+#box3 {
+    margin-top: 30px;
+    width: 250px;
+    height: 322px;
+    font-size: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgb(210, 2, 2), -3px -3px 20px rgb(210, 2, 207);
+    transform: translateY(20px);
+    animation: box3 3s backwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes box3 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+#box4 {
+    font-family: "Merienda", cursive;
+    margin-top: 55px;
+    padding: 10px;
+    color: whitesmoke;
+    transform: translateY(20px);
+    animation: box4 5s backwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes box4 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+#box5 {
+    font-size: 20px;
+    color: rgb(245, 156, 214);
+    margin-top: 10px;
+    padding-left: 2px;
+    transform: translateY(50px);
+    animation: box5 8s backwards;
+    animation-delay: 4s;
+}
+
+@keyframes box5 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+#box6 {
+    padding-right: 5px;
+    font-family: "Merienda";
+    color: blanchedalmond;
+    align-self: flex-end;
+    transform: translateY(20px);
+    animation: box6 8s backwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes box6 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 600px) {
+    #box1 {
+        font-size: 25px;
+    }
+    #box2 {
+        font-size: 35px;
+    }
+}
