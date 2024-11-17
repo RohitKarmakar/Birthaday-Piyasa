@@ -74,7 +74,7 @@ body {
 #box2 {
     font-size: 36px;
     font-family: "Satisfy", cursive;
-    color: #ff4081;
+    color: #ff0055;
     animation: box2 5s backwards;
     animation-delay: 1.5s;
 }
