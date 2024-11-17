@@ -221,6 +221,87 @@ body {
     }
 
 }
+
+/* General container styling */
+.image-container3 {
+    position: relative;
+    width: 300px; /* Carousel container size */
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing images */
+   
+}
+
+/* General container styling */
+/* General container styling */
+.image-container3 {
+    display: flex;
+    justify-content: space-around; /* Space between images */
+    align-items: center;
+    gap: 00px; /* Spacing between the images */
+    padding: 00px;
+    flex-wrap: wrap; /* Allow images to wrap to the next row if needed */
+    background-color: #121212; /* Dark background for better contrast */
+}
+
+/* General container styling */
+.image-container3 {
+    display: flex;
+    justify-content: space-between; /* Even spacing between images */
+    align-items: center;
+    gap: px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap in smaller screens */
+    padding: px;
+    background-color: #2b2b2b; /* Dark background for better visibility */
+}
+
+/* Styling for individual images */
+.image-container3 .img {
+    width: 150px;
+    height: 150px;
+    animation: bounceIn 5s ease-in-out infinite; /* Infinite bounce animation */
+}
+
+/* Staggered bounce delays */
+.image-container3 .img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.image-container3 .img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.image-container3 .img:nth-child(3) {
+    animation-delay: 0.9s;
+}
+.image-container3 .img:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+/* Styling for images inside */
+.image-container3 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keep images proportional */
+    border-radius: 70px; /* Rounded corners for a clean look */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px); /* Start off-screen */
+    }
+    50% {
+        transform: translateY(30px); /* Bounce upwards */
+    }
+    100% {
+        transform: translateY(-30px); /* Settle in place */
+    }
+}
+
+
+
 #box6 {
     padding-right: 10px;
     color: blanchedalmond;
