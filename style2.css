@@ -169,10 +169,8 @@ body {
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping to next row */
     gap: 10px; /* Spacing between images */
-    padding: 10px;
-    background-color: #000000; /* Light background for contrast */
-    border: 2px solid #000000;
-    border-radius: 5px;
+    padding: 5px;
+    background-color: #000000; /* Optional: Light background for contrast */
 }
 
 /* Styling for individual images */
@@ -181,38 +179,48 @@ body {
     overflow: hidden;
     width: 150px;
     height: 150px;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid; /* Border width */
+    border-image-slice: 1;
+    animation: borderColorChange 1s infinite linear; /* Animated border */
+    border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); /* Initial gradient */
 }
 
-.image-container2 .img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Animation for images */
 .image-container2 .img img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure images fill the space nicely */
-    animation: imageSlide 5s infinite alternate ease-in-out;
+    animation: zoomInOut 7s infinite ease-in-out; /* Add zooming animation */
 }
 
-/* Keyframes for sliding animation */
-@keyframes imageSlide {
-    0% {
-        transform: translateX(0);
+/* Keyframes for zooming animation */
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
     }
     50% {
-        transform: translateX(-25px);
-    }
-    100% {
-        transform: translateX(25px);
+        transform: scale(1.2); /* Zoom in */
     }
 }
 
+/* Keyframes for animated border color change */
+@keyframes borderColorChange {
+    0% {
+        border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+    25% {
+        border-image-source: linear-gradient(45deg, violet, red, orange, yellow, green, blue, indigo);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, indigo, violet, red, orange, yellow, green, blue);
+    }
+    75% {
+        border-image-source: linear-gradient(45deg, blue, indigo, violet, red, orange, yellow, green);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    }
 
+}
 #box6 {
     padding-right: 10px;
     color: blanchedalmond;
