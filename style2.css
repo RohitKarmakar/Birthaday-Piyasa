@@ -225,8 +225,7 @@ body {
 /* General container styling */
 .image-container3 {
     position: relative;
-    width: 300px; /* Carousel container size */
-    height: 300px;
+    
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -241,10 +240,11 @@ body {
     display: flex;
     justify-content: space-around; /* Space between images */
     align-items: center;
-    gap: 00px; /* Spacing between the images */
-    padding: 00px;
+    gap: 5px; /* Spacing between the images */
+    padding: 0px;
+    height: 300px;
     flex-wrap: wrap; /* Allow images to wrap to the next row if needed */
-    background-color: #121212; /* Dark background for better contrast */
+    background-color: #ff0000; /* Dark background for better contrast */
 }
 
 /* General container styling */
@@ -252,17 +252,17 @@ body {
     display: flex;
     justify-content: space-between; /* Even spacing between images */
     align-items: center;
-    gap: px; /* Space between images */
+    gap: 5px; /* Space between images */
     flex-wrap: wrap; /* Allow images to wrap in smaller screens */
-    padding: px;
-    background-color: #2b2b2b; /* Dark background for better visibility */
+    padding: 0px;
+    background-color: #000000; /* Dark background for better visibility */
 }
 
 /* Styling for individual images */
 .image-container3 .img {
     width: 150px;
     height: 150px;
-    animation: bounceIn 5s ease-in-out infinite; /* Infinite bounce animation */
+    animation: bounceIn 3s ease-in-out infinite; /* Infinite bounce animation */
 }
 
 /* Staggered bounce delays */
