@@ -74,7 +74,7 @@ body {
 #box2 {
     font-size: 36px;
     font-family: "Satisfy", cursive;
-    color: #ff0055;
+    color: #ff1865;
     animation: box2 5s backwards;
     animation-delay: 1.5s;
 }
@@ -88,10 +88,11 @@ body {
 #box3 {
     margin-top: 30px;
     width: 250px;
-    height: 322px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 20px rgb(210, 2, 2), -3px -1px 20px rgb(210, 2, 207);
-    animation: fadeIn 12s forwards, rotate 7s linear infinite, pulse 1.5s infinite;
+    height: 335px;
+    border-radius: 0px;
+    box-shadow: 3px 3px 20px rgb(203, 203, 203), -3px -3px 20px rgb(210, 2, 207);
+    animation: fadeIn 17s forwards, rotate 7s linear infinite, pulse 1.5s infinite;
+    
 }
 
 /* FadeIn effect for box3 */
@@ -139,7 +140,7 @@ body {
     margin-top: 40px;
     padding: 10px;
     animation: box4 5s backwards;
-    animation-delay: 3.5s;
+    animation-delay: 3s;
 }
 
 @keyframes box4 {
@@ -160,6 +161,57 @@ body {
     from { opacity: 0; transform: translateY(100px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* General container styling */
+.image-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping to next row */
+    gap: 10px; /* Spacing between images */
+    padding: 10px;
+    background-color: #000000; /* Light background for contrast */
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+/* Styling for individual images */
+.image-container2 .img {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container2 .img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for images */
+.image-container2 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the space nicely */
+    animation: imageSlide 5s infinite alternate ease-in-out;
+}
+
+/* Keyframes for sliding animation */
+@keyframes imageSlide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateX(25px);
+    }
+}
+
 
 #box6 {
     padding-right: 10px;
