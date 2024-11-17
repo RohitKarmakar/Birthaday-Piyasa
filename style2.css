@@ -198,7 +198,7 @@ body {
         transform: scale(1); /* Normal size */
     }
     50% {
-        transform: scale(1.2); /* Zoom in */
+        transform: scale(1.1); /* Zoom in */
     }
 }
 
@@ -240,9 +240,9 @@ body {
     display: flex;
     justify-content: space-around; /* Space between images */
     align-items: center;
-    gap: 5px; /* Spacing between the images */
+    gap: 1px; /* Spacing between the images */
     padding: 0px;
-    height: 300px;
+    height: 500px;
     flex-wrap: wrap; /* Allow images to wrap to the next row if needed */
     background-color: #ff0000; /* Dark background for better contrast */
 }
